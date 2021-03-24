@@ -1,12 +1,13 @@
-document.getElementById('button').addEventListener('click', display)
+document.getElementById('button').addEventListener('click', randomizer)
 let ran = 0
 let user = 0
-function display () {
-  user = document.getElementById('input').value
-  user = parseInt(user)
-  ran = Math.floor(Math.random() * 6) + 1
-  document.getElementById('paragraph').innerHTML = ran
-  if (ran === user) {
-    alert('correct')
+function randomizer () {
+  userGuess = document.getElementById('input').value
+  userGuess = parseInt(userGuess)
+
+  randomNumber = (Math.random() * 6) + 5
+  randomNumber = parseInt(randomNumber)
+  if (userGuess === randomNumber) {
+    alert('Congratulation You Win !!!')
   }
 }
